@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Menu with Bootstrap (Hover)</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+a{
+    color: black;
+}
+a:hover{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+.children {
+    display: none;
+    width: 100%; /* Set the width to 100% */
+}
+/* .navbarDropdown{
+    background-color: white;
+} */
+/* Show dropdown on hover */
+.page-link.has-children.active:hover .children {
+    display: block;
+    /* background-color: rgb(213, 209, 209); */
+}
+
+/* Hide default dropdown indicator */
+.page-link.has-children.active .dropdown-toggle::after {
+    display: none;
+}
+
+/* Show dropdown indicator on hover */
+.page-link.has-children.active:hover .dropdown-toggle::after {
+    display: inline-block;
+}
+
+/* Add hover effect for dropdown links */
+.children li a:hover {
+    /* background-color: #6060d5; Change background color on hover */
+    color: #205F65; /* Change text color on hover */
+}
+
+/* Additional Custom Styles */
+.page-link.has-children.active .children__links {
+    width: 100%; /* Set the width to 100% */
+}
+
+.page-link.has-children.active .children__title {
+    display: block;
+    width: 100%; /* Set the width to 100% */
+    padding: 0.5em 1.5em 0 0;
+}
+
+.page-link.has-children.active .children__title p,
+.page-link.has-children.active .children__title .h3 {
+    color: #205F65;
+}
+
+.page-link.has-children.active .children li {
+    margin: 0 0 0.25rem 0; /* Adjust margin for spacing */
+    padding: 0.5rem 1rem;
+    position: relative;
+    width: 100%; /* Set the width to 100% */
+}
+
+.page-link.has-children.active .children li a {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.page-link.has-children.active .children li a:hover {
+    color: #205F65;
+}
+
+.page-link.has-children.active .children li a:hover span i {
+    color: #205F65;
+    transform: translate(0.3rem, 0.2rem);
+}
+
+.row .dropdown-item i{
+    font-size: 24px;
+    color: #3d9f76;
+    margin-right: 10px;
+}
+.dropdown-subtitle{
+    color: black;
+}
+/* Define styles for screens with a width of 320px */
+@media screen and (max-width: 320px) {
+    .page-link.has-children.active .children__title {
+        width: 100%; /* Set the width to 100% for screens up to 320px */
+    }
+    .page-link.has-children.active .children__links {
+        width: 100%; /* Set the width to 100% for screens up to 320px */
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .page-link.has-children.active .children__title {
+        width: 50%; /* Set the width to 50% for screens wider than 576px */
+    }
+    .page-link.has-children.active .children__links {
+        width: 50%; /* Set the width to 50% for screens wider than 576px */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page-link.has-children.active .children__title {
+        width: 33.3333%; /* Set the width to 33.3333% for medium screens and above */
+    }
+    .page-link.has-children.active .children__links {
+        width: 66.6667%; /* Set the width to 66.6667% for medium screens and above */
+    }
+    .dropdown-header {
+        display: flex; /* Make the header items flex */
+        align-items: center; /* Center align header items */
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .page-link.has-children.active .children__title {
+        width: 25%; /* Set the width to 25% for screens wider than 992px */
+    }
+    .page-link.has-children.active .children__links {
+        width: 75%; /* Set the width to 75% for screens wider than 992px */
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .page-link.has-children.active .children__title {
+        width: 20%; /* Set the width to 20% for screens wider than 1200px */
+    }
+    .page-link.has-children.active .children__links {
+        width: 80%; /* Set the width to 80% for screens wider than 1200px */
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HTML Structure with Bootstrap Classes -->
+<li class="nav-item dropdown page-link has-children active navbarDropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        Services
+    </a>
+    <div class="dropdown-menu children" aria-labelledby="navbarDropdown">
+        <div class="row">
+            <div class="dropdown-header col-12 col-md-4">
+                <div class="dropdown-header"> <!-- Added a container for header items -->
+                    <h6 class="dropdown-subtitle">Our Services</h6>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <a class="dropdown-item" href="#">Cloud & Application services<i class="bi-arrow-right-short"></i></a>
+                <a class="dropdown-item" href="#">Mobile App Development<i class="bi-arrow-right-short"></i></a>
+                <a class="dropdown-item" href="#">Microsoft Power Apps Development<i class="bi-arrow-right-short"></i></a>
+            </div>
+            <div class="col-12 col-md-4">
+                <a class="dropdown-item" href="#">Bubble App Development<i class="bi-arrow-right-short"></i></a>
+                <a class="dropdown-item" href="#">AI & Machine Learning<i class="bi-arrow-right-short"></i></a>
+                <a class="dropdown-item" href="#">QA & Testing<i class="bi-arrow-right-short"></i></a>
+                <a class="dropdown-item" href="#">UI/UX Designing<i class="bi-arrow-right-short"></i></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+</body>
+</html>

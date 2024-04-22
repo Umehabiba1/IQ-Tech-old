@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Menu with Bootstrap (Hover)</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+/* Add your custom styles here */
+a {
+    color: black;
+}
+a:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+.children {
+    display: none;
+    width: 100%;
+}
+.page-link.has-children:hover .children {
+    display: block;
+    color: #000000;
+}
+.page-link.has-children .dropdown-toggle::after {
+    display: none;
+}
+.page-link.has-children:hover .dropdown-toggle::after {
+    display: inline-block;
+}
+.children li a:hover {
+    color: #000000;
+}
+.page-link.has-children .children__links {
+    width: 100%;
+}
+.page-link.has-children .children__title {
+    display: block;
+    width: 100%;
+    padding: 0.5em 1.5em 0 0;
+}
+.page-link.has-children .children__title p,
+.page-link.has-children .children__title .h3 {
+    color: #205F65;
+}
+.page-link.has-children .children li {
+    margin: 0 0 0.25rem 0;
+    padding: 0.5rem 1rem;
+    position: relative;
+    width: 100%;
+}
+.dropdown-item:active {
+    background-color: #f1f1f2;
+    color: #000000;
+}
+.page-link.has-children .children li a {
+    color: black;
+    transition: color 0.3s ease;
+}
+.page-link.has-children .children li a:hover {
+    color: #205F65;
+}
+.page-link.has-children .children li a:hover span i {
+    color: #205F65;
+    transform: translate(0.3rem, 0.2rem);
+}
+.row .dropdown-item i {
+    font-size: 24px;
+    color: #3d9f76;
+    margin-right: 10px;
+}
+.dropdown-subtitle {
+    color: black;
+}
+.dropdown-menu.children {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-header {
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    color: #212529;
+    font-size: 16px;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Add your custom styles here */
+.page-link.has-children.active .children {
+    display: block;
+}
+
+.page-link.has-children.active .dropdown-toggle::after {
+    display: none;
+}
+
+.page-link.has-children.active:hover .dropdown-toggle::after {
+    display: inline-block;
+}
+
+.children li a:hover {
+    color: #205F65;
+}
+
+.page-link.has-children.active .children__links {
+    width: 100%;
+}
+
+.page-link.has-children.active .children__title {
+    display: block;
+    width: 100%;
+    padding: 0.5em 1.5em 0 0;
+}
+
+.page-link.has-children.active .children__title p,
+.page-link.has-children.active .children__title .h3 {
+    color: #205F65;
+}
+
+.page-link.has-children.active .children li {
+    margin: 0 0 0.25rem 0;
+    padding: 0.5rem 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.page-link.has-children.active .children li a {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.page-link.has-children.active .children li a:hover {
+    color: #205F65;
+}
+
+.page-link.has-children.active .children li a:hover span i {
+    color: #205F65;
+    transform: translate(0.3rem, 0.2rem);
+}
+
+.row .dropdown-item i {
+    font-size: 24px;
+    color: #3d9f76;
+    margin-right: 10px;
+}
+
+.dropdown-subtitle {
+    color: black;
+}
+
+@media screen and (max-width: 320px) {
+    .page-link.has-children .children__title {
+        width: 100%;
+    }
+    .page-link.has-children .children__links {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .page-link.has-children .children__title {
+        width: 50%;
+    }
+    .page-link.has-children .children__links {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page-link.has-children .children__title {
+        width: 33.3333%;
+    }
+    .page-link.has-children .children__links {
+        width: 66.6667%;
+    }
+    .dropdown-header {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .page-link.has-children .children__title {
+        width: 25%;
+    }
+    .page-link.has-children .children__links {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .page-link.has-children .children__title {
+        width: 20%;
+    }
+    .page-link.has-children .children__links {
+        width: 80%;
+    }
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="navbarDropdown">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item dropdown page-link has-children navbarDropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    Services
+                </a>
+                <div class="dropdown-menu children" aria-labelledby="navbarDropdown">
+                    <div class="row">
+                        <div class="dropdown-header col-12 col-md-4">
+                            <div class="dropdown-header">
+                                <h6 class="dropdown-subtitle">Our Services</h6>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <a class="dropdown-item" href="#">Cloud & Application services<i class="bi-arrow-right-short"></i></a>
+                            <a class="dropdown-item" href="#">Mobile App Development<i class="bi-arrow-right-short"></i></a>
+                            <a class="dropdown-item" href="#">Microsoft Power Apps Development<i class="bi-arrow-right-short"></i></a>
+                            <a class="dropdown-item" href="#">Bubble App Development<i class="bi-arrow-right-short"></i></a>
+                        </div>
+                        <div class="col-12">
+                            <a class="dropdown-item" href="#">AI & Machine Learning<i class="bi-arrow-right-short"></i></a>
+                            <a class="dropdown-item" href="#">QA & Testing<i class="bi-arrow-right-short"></i></a>
+                            <a class="dropdown-item" href="#">UI/UX Designing<i class="bi-arrow-right-short"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
