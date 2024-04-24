@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>IQ TECH - Home</title>
+    <title>IQ TECH - CLOUD SERVICES</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -35,56 +35,204 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-    }
-    
-    body {
-        background-color: #f1f1f2;
-    }
-    
-    #cloud h1 {
-        font-family: Montserrat;
-        font-size: 39px;
-        font-weight: 400;
-        line-height: 46px;
-        text-align: center;
-        letter-spacing: normal;
-        color: #205f65;
-        background-color: #f1f1f2;
-        width: 720px;
-        height: 278px;
-    }
-    
-    #cloud h3 {
-        font-family: Montserrat;
-        font-size: 21px;
-        font-weight: 600;
-        line-height: 27px;
-        text-align: left;
-        letter-spacing: normal;
-        color: #205f65;
-        background-color: #f1f1f2;
-        display: inline-block;
-       
-    }
-    
-    #cloud p {
-        font-family: Roboto;
-        font-size: 16px;
-        line-height: normal;
-        font-weight: 400;
-        text-align: start;
-        letter-spacing: normal;
-        color: #000000;
-        background-color: #f1f1f2;
-        width: 690px;
-        text-align: justify;
-    }
-</style>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        #cloud h1 {
+            font-family: Montserrat;
+            font-size: 39px;
+            font-weight: 400;
+            line-height: 46px;
+            text-align: center;
+            letter-spacing: normal;
+            color: #205f65;
+            background-color: #f1f1f2;
+            width: 720px;
+            height: 278px;
+        }
+
+        #cloud h3 {
+            font-family: Montserrat;
+            font-size: 21px;
+            font-weight: 600;
+            line-height: 27px;
+            text-align: left;
+            letter-spacing: normal;
+            color: #205f65;
+            background-color: #f1f1f2;
+            display: inline-block;
+
+        }
+
+        #cloud p {
+            font-family: Roboto;
+            font-size: 16px;
+            line-height: normal;
+            font-weight: 400;
+            text-align: start;
+            letter-spacing: normal;
+            color: #000000;
+            background-color: #f1f1f2;
+            width: 690px;
+            text-align: justify;
+        }
+
+        /* Specific styles */
+        .c-block,
+        .c-block--cols,
+        .c-block--grey,
+        .section-in,
+        .section-been {
+            font-family: 'Roboto';
+            font-size: 16px;
+            line-height: normal;
+            text-align: start;
+            letter-spacing: normal;
+
+        }
+
+        .c-block--grey,
+        .section-in,
+        .section-been {
+            background-color: #f1f1f2;
+            color: #000000;
+        }
+
+        .c-block .c-block-title {
+
+            margin: 40px auto;
+            padding: 50px 17px 1.5rem;
+
+
+        }
+
+        .c-block h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 35px;
+            font-weight: 400;
+            color: #205f65;
+            line-height: 45px;
+            /* margin-bottom: 20px; */
+            max-width: 46rem;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+
+        .container .container--block {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            width: 100%;
+        }
+
+        .wysiwyg-content {
+            font-family: 'Roboto';
+            font-size: 16px;
+            line-height: normal;
+            text-align: start;
+            letter-spacing: normal;
+            color: #000000;
+            background-color: #f1f1f2;
+        }
+
+        .wysiwyg-content h2 {
+            color: #205f65;
+            font-family: "Montserrat", sans-serif;
+            margin: auto;
+            line-height: 27px;
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        .wysiwyg-content p {
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+
+        .container {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80em;
+            padding: 0 1em;
+            position: relative;
+            width: 100%;
+        }
+
+        .c-block--cols .container.narrow {
+            max-width: 43.125rem;
+            text-align: justify;
+        }
+
+        .services-capabilities {
+            background-color: white;
+        }
+
+        .services-capabilities .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1em;
+        }
+
+        .services-capabilities .col {
+            width: 100%;
+            padding: 0;
+        }
+
+        .services-capabilities .col--list {
+            flex-basis: calc(50% - 1em);
+            max-width: calc(50% - 1em);
+            margin-right: 1em;
+        }
+
+        .services-capabilities .capabilities-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services-capabilities .col--image {
+            flex-basis: calc(50% - 1em);
+            max-width: calc(50% - 1em);
+            margin-left: 1em;
+        }
+
+        .services-capabilities .capabilities-image {
+            padding: 0;
+        }
+
+        .services-capabilities .capabilities-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .wysiwyg-content p{
+            FONT-FAMILY:"Roboto";
+            FONT-SIZE:20.25px;
+            LINE-HEIGHT:33px;
+            TEXT-ALIGN:start;
+            LETTER-SPACING:normal;
+        }
+
+        blockquote {
+            border-left: 2px solid #000000;
+            /* margin-left: 5px; */
+            padding-left: 20px;
+            margin-bottom: 10px;
+
+        }
+
+        .sec-3 .wysiwyg-content {
+            margin: 10px 0px;
+        }
+    </style>
 </head>
 
 <body>
@@ -99,17 +247,17 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto " href="index.html#hero">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="index.html#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="about.html">About Us</a></li>
 
                     <li class="nav-item dropdown page-link has-children active navbarDropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button"
                             aria-haspopup="true" aria-expanded="false">Services</a>
-                        <div class="dropdown-menu children" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu children dropdown-menu-full" aria-labelledby="navbarDropdown">
                             <div class="row">
                                 <div class="dropdown-header col-12 col-md-4">
                                     <div class="dropdown-header">
-                                        <h6 class="dropdown-subtitle ">Our Services</h6>
+                                        <h6 class="dropdown-subtitle"><a href="services.html">Our Services</a></h6>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4">
@@ -150,15 +298,18 @@
 
     <!-- End #header -->
 
-    <!-- ======= Hero Section ======= -->
+    <!-- ======= Hero Section =======
+    <section id="hero" style="background-image: url('/Amoeba/assets/img/services.png'); background-position: top center; opacity: 0.6; "> -->
+
     <section id="hero">
         <div class="hero-container">
-            <h1>Cloud & Application services</h1>
+            <h1>Cloud & Application Services</h1>
+            <h2><!-- Add your subtitle here --></h2>
         </div>
-    </section><!-- #hero -->
+    </section>
 
     <main id="main">
-        <section id="cloud">
+        <!-- <section id="cloud" class="container-fluid cloud" style="background: #F1F1F2;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mx-auto">
@@ -207,6 +358,121 @@
                     </div>
                 </div>
 
+            </div>
+        </section> -->
+
+        <section class="c-block c-block--cols c-block--grey section-in section-been ">
+            <div class="container container--block">
+                <h2 class="c-block-title">Leveraging the cloud today is no longer simply
+                    rehosting applications, but
+                    instead intelligent and thoughtful steps towards engineering cloud-native systems</h2>
+            </div>
+            <div class="container narrow">
+                <div class="col">
+                    <div class="wysiwyg-content">
+                        <h2 style="text-align: left;"><span style="color: #205f65;">Modern cloud platforms are
+                                complex.
+                            </span></h2>
+
+                        <p style="text-align: left;">As an Amazon Web Services, Microsoft Azure and Google Cloud
+                            Platform partner, we have significant experience in migrating applications, data and
+                            infrastructure to the cloud; delivering potentially significant total cost of
+                            ownership,
+                            resiliency, scalability, and security benefits.</p>
+
+                        <p style="text-align: left;">This is a natural extension of our <strong><span
+                                    style="text-decoration: underline;"><a
+                                        href="https://methods.co.uk/services/disaggregation/" target="_blank"
+                                        rel="noopener">disaggregation</a></span></strong>, <strong><span
+                                    style="text-decoration: underline;"><a
+                                        href="https://methods.co.uk/services/user-led-service-design/" target="_blank"
+                                        rel="noopener">service design</a></span></strong>, and
+                            service management capabilities for a full end-to-end service, designed to expand
+                            your
+                            operating model to place Cloud-Native engineering at the heart of capability and
+                            service
+                            development.</p>
+
+                        <h2 style="text-align: left;"><span style="color: #205f65;">We place
+                                emphasis…&nbsp;</span>
+                        </h2>
+                        <p style="text-align: left;"><span style="color: #000000;">…on cloud interoperability and
+                                integration ensuring you get cloud transformation right the first time.
+                            </span>Our
+                            technical architects and engineers help build and connect sustainable cloud-native
+                            systems
+                            to thrive in the cloud ecosystem. Services include cloud-native software development,
+                            container deployment, serverless platforms, landing zones, automation orchestration
+                            and
+                            configuration management, continuous integration/deployments, custom microservices,
+                            and
+                            API-based solutions.</p>
+
+
+                        <h2 style="text-align: left;"><span style="color: #205f65;">We’ll help you…</span></h2>
+                        <p style="text-align: left;">…enable DevOps and DevSecOps-aligned software and platform
+                            engineering capabilities based on continuous integration/delivery principles. We’ll
+                            also
+                            work with you to coach and transfer knowledge to your in-house teams, so they can
+                            take
+                            ownership of operating and improving your services.</p>
+                        <h2 style="text-align: left;"><span style="color: #205f65;">Our work…</span></h2>
+                        <p style="text-align: left;">…is based on modern, well-architected framework and ‘Secure
+                            Software Development Life Cycle’ principles, delivering secure, high-performing,
+                            resilient, well-monitored, and cost-effective platforms for your applications and
+                            data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="c-block services-capabilities section-init section-been section-in"
+            style="background-color: white;">
+            <div class="container">
+                <h2 class="c-block-title"style="color: #000000;">Our expertise within cloud engineering</h2>
+            </div>
+            <div class="container">
+                <div class="col col--list">
+                    <ul class="capabilities-list">
+                        <li>Cloud automation and DevSecOps</li>
+                        <li>Cloud landing zones and virtual data centres</li>
+                        <li>Cloud governance and reporting</li>
+                        <li>Container orchestration and management</li>
+                        <li>Cloud integration platforms</li>
+                        <li>Hybrid and multi-cloud strategy</li>
+                        <li>Continuous integration / delivery principles</li>
+                    </ul>
+                </div>
+                <div class="col col--image">
+                    <div class="capabilities-image">
+                        <img src="assets/img/cloud.png" alt="Cloud Engineering Diagram">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="c-block c-block--cols c-block--grey section-been section-init section-in sec-3">
+            <div class="container container--block">
+                <!-- This is an empty container -->
+            </div>
+
+            <div class="container narrow">
+                <div class="col">
+                    <div class="wysiwyg-content para">
+                        <blockquote>
+                            <p>Taking an organisation on the path to transformation, with one or more cloud
+                                service providers, starts with laying the right foundation in terms of the cloud
+                                platform. The cloud platform streamlines the process of adopting cloud services
+                                through a well-defined catalogue that meets organisational process, compliance,
+                                and operational needs.</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container container--block">
+                <!-- Another empty container -->
             </div>
         </section>
     </main>

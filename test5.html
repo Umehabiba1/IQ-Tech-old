@@ -9,101 +9,195 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* CSS styles here */
+.c-cta-footer {
+  background-color: #f1f1f2;
+  padding: 50px 0;
+}
 
-        .c-cta-footer {
-            background-color: #f8f9fa;
-            padding: 50px 0;
-        }
+.c-cta-footer-container {
+  background-color: #ffffff; /* Container background color white */
+}
 
-        .c-cta-footer .container {
-            display: flex;
-            align-items: center;
-            background-color: white;
-        }
+.c-cta-footer-container h2 {
+  font-family: 'Montserrat';
+  font-size: 39px;
+}
 
-        .c-cta-footer .c-cta-footer-cover {
-            height: auto;
-        }
+.c-cta-footer-container p {
+  font-family: 'Roboto';
+  font-size: 20px;
+}
 
-        .c-cta-footer .ll-image {
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            width: 600px;
-        }
+.c-cta-footer .container {
+  display: flex;
+  align-items: center;
+}
 
-        .c-cta-footer .cta-footer-content-inner {
-            font-family: Roboto, sans-serif;
-            /* font-size: 16px; */
-            line-height: normal;
-            text-align: start;
-            letter-spacing: normal;
-            color: #000000;
-            background-color: #ffffff;
-        }
+.c-cta-footer .ll-image {
+  background-size: cover;
+  background-position: center;
+  width: 65%;
+  height: 500px;
+}
 
-        .c-cta-footer h2 {
-            font-family: Montserrat, sans-serif;
-            font-size: 39px;
-            line-height: 46px;
-            text-align: start;
-            letter-spacing: normal;
-            color: #000000;
-            background-color: #ffffff;
-        }
+.c-cta-footer .cta-footer-content-inner {
+  font-family: 'Roboto';
+  color: #000000;
+  margin-left: 20px;
+}
 
-        .c-cta-footer .sub-text {
-            font-family: Roboto, sans-serif;
-            font-size: 16px;
-            line-height: 23px;
-            text-align: start;
-            letter-spacing: normal;
-            color: #000000;
-            background-color: #ffffff;
-        }
+.c-cta-footer h2 {
+  font-family: 'Montserrat',sans-serif;
+  /* font-family: "Roboto",sans-serif; */
+  /* font-size: 39px; */
+  font-weight: lighter;
+  /* line-height: 46px; Adjusted line height */
+  /* text-align: start; */
+  letter-spacing: normal;
+  margin-top: 20px;
+}
 
-        .c-cta-footer .p-l i {
-            font-family: methods-icons;
-            /* Use the specified font family */
-            font-size: 16px;
-            /* Set the font size */
-            line-height: 16px;
-            /* Set the line height */
-            color: #3eb6cb;
-            /* Set the icon color */
-            margin-right: 10px;
-            /* Additional styles if needed */
-        }
+.c-cta-footer .sub-text {
+  /* font-size: 16px; */
+  font-family: "Roboto",sans-serif;
+  margin-bottom: 20px;
+  line-height: 20px;
+  letter-spacing: normal;
 
-        .c-cta-footer .p-l {
-            margin-top: 20px;
-        }
 
-        .c-cta-footer a {
-            color: #000000;
-        }
+}
+
+.c-cta-footer .p-l i {
+  /* font-size: 16px; */
+  font-family: "Roboto",sans-serif;
+  margin-right: 10px;
+  color: #34a1a9;
+}
+
+.c-cta-footer .p-l a {
+  color: #000000;
+  /* font-size: 16px; */
+  font-family: "Roboto",sans-serif;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .c-cta-footer .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .c-cta-footer .ll-image {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .c-cta-footer .cta-footer-content-inner {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .c-cta-footer h2,
+  .c-cta-footer .sub-text {
+    text-align: center;
+  }
+
+  .c-cta-footer-container h2 {
+    font-size: 26px; /* Adjusted font size for smaller screens */
+  }
+
+  .c-cta-footer-container p {
+    font-size: 14px; /* Adjusted font size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+    .c-cta-footer .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .c-cta-footer .ll-image {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .c-cta-footer .cta-footer-content-inner {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .c-cta-footer h2,
+  .c-cta-footer .sub-text {
+    text-align: center;
+  }
+
+  .c-cta-footer-container h2 {
+    font-size: 24px; /* Adjusted font size for smaller screens */
+  }
+
+  .c-cta-footer-container p {
+    font-size: 12px; /* Adjusted font size for smaller screens */
+  }
+}
+
+@media (max-width: 320px) {
+    .c-cta-footer .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .c-cta-footer .ll-image {
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .c-cta-footer .cta-footer-content-inner {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .c-cta-footer h2,
+  .c-cta-footer .sub-text {
+    text-align: center;
+  }
+
+  .c-cta-footer-container h2 {
+    font-size: 22px; /* Adjusted font size for smaller screens */
+  }
+
+  .c-cta-footer-container p {
+    font-size: 10px; /* Adjusted font size for smaller screens */
+  }
+}
+
+
     </style>
 </head>
 
 <body>
 
-    <section class="c-cta-footer section-been section-init section-in">
-        <div class="container">
-
-            <div class="col-lg-4 c-cta-footer-content">
-                <div class="cta-footer-content-inner">
-                    <h2 class="">Get in touch</h2>
-                    <p class="sub-text">Want to know how Methods can help? Let's talk.</p>
-                    <p class="p-l"><i class="bi bi-envelope"></i><a href="mailto:info@techpal.dev">Techpal.dev</a>
-                    </p>
-                    <p class="p-l"><i class="bi bi-telephone"></i><a href="tel:02072401121">020 7240 1121</a></p>
-                </div>
-            </div>
-            <div class="ll-image col-lg-8 c-cta-footer-cover"
-                style="background-image: url('/Amoeba/assets/img/hero-background1.jpg');"></div>
+    <section class="c-cta-footer section-been section-init section-in" id="contact">
+        <div class="container c-cta-footer-container"> <!-- Added c-cta-footer-container class -->
+          
+          <div class="cta-footer-content-inner col-lg-4 col-md-6 col-sm-6">
+            <h2 class="">Get in touch</h2>
+            <p class="sub-text">Want to know how Methods can help? Let's talk.</p>
+            <p class="p-l"><i class="bi bi-envelope"></i><a href="mailto:info@iqtech.com">info@iqtech.com</a></p>
+            <p class="p-l"><i class="bi bi-telephone"></i><a href="tel:02072401121">020 7240 1121</a></p>
+          </div>
+          <div class="ll-image col-lg-8 col-md-6 col-sm-6 c-cta-footer-cover"
+               style="background-image: url('assets/img/contact.jpeg');"></div>
         </div>
-    </section>
+      </section>
+      
+
 
 </body>
 
