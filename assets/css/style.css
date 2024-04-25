@@ -1768,16 +1768,6 @@ section {
   /* font-family: "Montserrat"; */
 }
 
-
-
-/* #footer .footer-newsletter form input[type=submit] {
-  background: #18d26e;
-}
-
-#footer .footer-newsletter form input[type=submit]:hover {
-  background: #69d0fd;
-} */
-
 #footer .footer-top {
   background: #000000;
   /* border-top: 1px solid #474747; */
@@ -1786,27 +1776,14 @@ section {
   padding: 60px 0 30px 0;
 }
 
-/* #footer .footer-top .social-links a {
-  background: #18d26e;
-}
-
-#footer .footer-top .social-links a:hover {
-  background: #69d0fd;
-} */
-
 #footer .footer-top h4,
 h3 {
   color: #ffffff;
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 700;
-
-  /* color: #43aea0; */
 }
 
-/* #footer .footer-top .footer-links ul i {
-  color: #7af8b5;
-} */
 #footer .footer-contact {
   font-family: "Roboto";
   font-size: 14px;

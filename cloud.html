@@ -37,43 +37,38 @@
         rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <style>
-        #cloud h1 {
-            font-family: Montserrat;
-            font-size: 39px;
-            font-weight: 400;
-            line-height: 46px;
+        #hero {
+            width: 100%;
+            height: 75vh;
+            background: url("assets/img/cloud1.png") center;
+            background-size: cover;
+            position: relative;
+            margin-bottom: -80px;
+        }
+
+
+        #hero .hero-container {
+            background-color: rgb(0, 0, 0, 0.6);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            padding-top: 80px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             text-align: center;
-            letter-spacing: normal;
-            color: #205f65;
-            background-color: #f1f1f2;
-            width: 720px;
-            height: 278px;
         }
 
-        #cloud h3 {
-            font-family: Montserrat;
-            font-size: 21px;
+        #hero h1 {
+            margin: 0px 133px;
+            font-size: 39px;
+            font-family: "Montserrat";
             font-weight: 600;
-            line-height: 27px;
-            text-align: left;
-            letter-spacing: normal;
-            color: #205f65;
-            background-color: #f1f1f2;
-            display: inline-block;
-
-        }
-
-        #cloud p {
-            font-family: Roboto;
-            font-size: 16px;
-            line-height: normal;
-            font-weight: 400;
-            text-align: start;
-            letter-spacing: normal;
-            color: #000000;
-            background-color: #f1f1f2;
-            width: 690px;
-            text-align: justify;
+            /* line-height: 56px; */
+            color: #fff;
         }
 
         /* Specific styles */
@@ -98,10 +93,9 @@
         }
 
         .c-block .c-block-title {
-
-            margin: 40px auto;
-            padding: 50px 17px 1.5rem;
-
+            text-align: center;
+            margin: 0 auto;
+            padding: 0 0 5rem;
 
         }
 
@@ -111,45 +105,40 @@
             font-weight: 400;
             color: #205f65;
             line-height: 45px;
-            /* margin-bottom: 20px; */
             max-width: 46rem;
             text-align: center;
             letter-spacing: 2px;
         }
 
 
-        .container .container--block {
+        .c-block .container .container--block {
             margin-left: auto;
             margin-right: auto;
             position: relative;
             width: 100%;
         }
 
-        .wysiwyg-content {
-            font-family: 'Roboto';
-            font-size: 16px;
-            line-height: normal;
-            text-align: start;
-            letter-spacing: normal;
-            color: #000000;
-            background-color: #f1f1f2;
-        }
-
         .wysiwyg-content h2 {
             color: #205f65;
             font-family: "Montserrat", sans-serif;
-            margin: auto;
             line-height: 27px;
-            font-size: 21px;
+            font-size: 18px;
+            margin-bottom: 26px;
             font-weight: 700;
+            letter-spacing: 2px;
+            text-align: left;
         }
 
         .wysiwyg-content p {
             margin-bottom: 2rem;
-            text-align: justify;
+            font-size: 17px;
+            FONT-FAMILY: "Roboto";
+            LINE-HEIGHT: 33px;
+            TEXT-ALIGN: start;
+            LETTER-SPACING: normal;
         }
 
-        .container {
+        .c-block .container {
             align-items: flex-start;
             display: flex;
             flex-direction: row;
@@ -157,7 +146,7 @@
             justify-content: flex-start;
             margin-left: auto;
             margin-right: auto;
-            max-width: 80em;
+            max-width: 100%;
             padding: 0 1em;
             position: relative;
             width: 100%;
@@ -167,6 +156,7 @@
             max-width: 43.125rem;
             text-align: justify;
         }
+
 
         .services-capabilities {
             background-color: white;
@@ -186,14 +176,26 @@
         }
 
         .services-capabilities .col--list {
-            flex-basis: calc(50% - 1em);
+            flex-basis: 100%;
             max-width: calc(50% - 1em);
             margin-right: 1em;
         }
 
         .services-capabilities .capabilities-list {
-            list-style: none;
-            padding: 0;
+            list-style: disc;
+            padding-left: 8rem;
+        }
+
+        .services-capabilities .capabilities-list li {
+            font-family: "Roboto";
+            font-size: 18px;
+            line-height: 45px;
+            letter-spacing: normal;
+        }
+
+        li::marker {
+            color: #43aea0;
+            font-size: 25px;
         }
 
         .services-capabilities .col--image {
@@ -213,17 +215,15 @@
             margin: 0 auto;
         }
 
-        .wysiwyg-content p{
-            FONT-FAMILY:"Roboto";
-            FONT-SIZE:20.25px;
-            LINE-HEIGHT:33px;
-            TEXT-ALIGN:start;
-            LETTER-SPACING:normal;
+        .wysiwyg-content p {
+            FONT-FAMILY: "Roboto";
+            LINE-HEIGHT: 33px;
+            TEXT-ALIGN: start;
+            LETTER-SPACING: normal;
         }
 
         blockquote {
             border-left: 2px solid #000000;
-            /* margin-left: 5px; */
             padding-left: 20px;
             margin-bottom: 10px;
 
@@ -232,6 +232,422 @@
         .sec-3 .wysiwyg-content {
             margin: 10px 0px;
         }
+
+        .wysiwyg-content img.aligncenter {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .wysiwyg-content img {
+            display: block;
+            height: auto;
+            margin-top: 0.5rem;
+        }
+
+        #footer {
+            background: #000000;
+            padding: 30px 0;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        #footer .footer-top {
+            background: #000000;
+            border-bottom: 1px solid #474747;
+            margin-bottom: 20px;
+            padding: 60px 0 30px 0;
+        }
+
+        #footer .footer-top h4,
+        h3 {
+            color: #ffffff;
+            font-family: "Montserrat";
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        #footer .footer-contact {
+            font-family: "Roboto";
+            font-size: 14px;
+        }
+
+        #footer .footer-top .footer-links ul a {
+            color: #969595;
+            opacity: 1;
+            font-family: "Roboto";
+            font-size: 14px;
+
+        }
+
+        #footer .footer-top .footer-links li {
+            list-style-type: none;
+            margin-left: -32px;
+            /* color: #F1F1F2; */
+
+        }
+
+        #footer .footer-top .footer-links ul a:hover {
+            /* color: #7af8b5; */
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        #footer .copyright {
+            text-align: center;
+        }
+
+        #footer .credits {
+            padding-top: 10px;
+            text-align: center;
+            font-size: 13px;
+            color: #fff;
+        }
+
+        @media (min-width:1140px) {
+            #footer .footer-top {
+
+                padding: 60px 0 30px 130px;
+            }
+
+        }
+
+        .copyright {
+            font-family: "Roboto";
+            font-size: 13px;
+        }
+
+        .credits a {
+            color: #fff;
+        }
+
+        .credits a:hover {
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-to-top {
+            position: fixed;
+            visibility: hidden;
+            opacity: 0;
+            right: 15px;
+            bottom: 15px;
+            z-index: 99999;
+            background: #ffffff;
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            transition: all 0.4s;
+        }
+
+        .back-to-top i {
+            font-size: 24px;
+            color: #43aea0;
+            line-height: 0;
+        }
+
+        .back-to-top:hover {
+            background: #000000;
+            color: #ffffff;
+            border-radius: 50%;
+        }
+
+        .back-to-top.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+/* Common styles */
+
+/* Media Query: Max width 1440px */
+@media (max-width: 1440px) {
+    /* Container */
+    .c-block .container {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%; /* Adjusted max-width */
+        padding: 0 1em;
+        position: relative;
+    }
+
+    /* Headings */
+    .c-block h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 35px;
+        font-weight: 400;
+        color: #205f65;
+        line-height: 45px;
+        max-width: 100%;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .wysiwyg-content h2 {
+        color: #205f65;
+        font-family: "Montserrat", sans-serif;
+        line-height: 27px;
+        font-size: 18px;
+        margin-bottom: 26px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-align: left;
+    }
+
+    /* Paragraphs */
+    .wysiwyg-content p {
+        font-family: "Roboto";
+        font-size: 14px;
+        line-height: 33px;
+        text-align: start;
+        letter-spacing: normal;
+    }
+
+    /* List Items */
+    .services-capabilities .capabilities-list li {
+        font-family: "Roboto";
+        font-size: 18px;
+        line-height: 45px;
+        letter-spacing: normal;
+    }
+
+    /* Blockquote */
+    blockquote {
+        border-left: 2px solid #000000;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Media Query: Max width 1140px */
+@media (max-width: 1140px) {
+    /* Container */
+    .c-block .container {
+        max-width: 100%; /* Adjusted max-width */
+    }
+
+    /* Headings */
+    .c-block h2 {
+        font-size: 32px;
+        line-height: 42px;
+        max-width: 43rem; /* Adjusted max-width */
+        text-align: center;
+    }
+
+    .wysiwyg-content h2 {
+        line-height: 25px;
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    /* Paragraphs */
+    .wysiwyg-content p {
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    /* List Items */
+    .services-capabilities .capabilities-list li {
+        font-size: 16px;
+        line-height: 42px;
+    }
+
+    /* Blockquote */
+    blockquote {
+        padding-left: 20px;
+    }
+}
+
+/* Media Query: Max width 992px */
+@media (max-width: 992px) {
+    /* Container */
+    .c-block .container {
+        max-width: 100%; /* Adjusted max-width */
+    }
+
+    /* Headings */
+    .c-block h2 {
+        font-size: 30px;
+        line-height: 40px;
+        max-width: 40rem; /* Adjusted max-width */
+    }
+
+    .wysiwyg-content h2 {
+        line-height: 22px;
+        font-size: 16px;
+        margin-bottom: 22px;
+    }
+
+    /* Paragraphs */
+    .wysiwyg-content p {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    /* List Items */
+    .services-capabilities .capabilities-list li {
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+    /* Blockquote */
+    blockquote {
+        padding-left: 18px;
+    }
+}
+
+/* Media Query: Max width 768px */
+@media (max-width: 768px) {
+    /* Container */
+    .c-block .container {
+        max-width: 100%; /* Adjusted max-width */
+    }
+
+    /* Headings */
+    .c-block h2 {
+        font-size: 28px;
+        line-height: 38px;
+        max-width: 38rem; /* Adjusted max-width */
+    }
+
+    .wysiwyg-content h2 {
+        line-height: 20px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    /* Paragraphs */
+    .wysiwyg-content p {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    /* List Items */
+    .services-capabilities .capabilities-list li {
+        font-size: 12px;
+        line-height: 38px;
+    }
+
+    /* Blockquote */
+    blockquote {
+        padding-left: 16px;
+    }
+}
+
+/* Media Query: Max width 576px */
+@media (max-width: 576px) {
+    /* Container */
+    .c-block .container {
+        max-width: 100%; /* Adjusted max-width */
+    }
+
+    /* Headings */
+    .c-block h2 {
+        font-size: 26px;
+        line-height: 36px;
+        max-width: 35rem; /* Adjusted max-width */
+    }
+
+    .wysiwyg-content h2 {
+        line-height: 18px;
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    /* Paragraphs */
+    .wysiwyg-content p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    /* List Items */
+    .services-capabilities .capabilities-list li {
+        font-size: 10px;
+        line-height: 35px;
+    }
+
+    /* Blockquote */
+    blockquote {
+        padding-left: 14px;
+    }
+}
+
+/* Media Query: Max width 320px */
+@media (max-width:320px) {
+                .services-capabilities .capabilities-list li {
+                    font-size: 12px;
+                    /* Adjusted font size for small screens */
+                }
+
+                .services-capabilities .col--list {
+                    flex-basis: 100%;
+                    max-width: 100%;
+                    margin-right: 1em;
+                }
+
+                .services-capabilities .capabilities-list {
+                    list-style: disc;
+                    font-size: 4px;
+                    padding-left: 2rem;
+                }
+
+                li::marker {
+                    color: #43aea0;
+                    font-size: 10px;
+                }}
+@media (max-width: 320px) {
+    /* Container */
+    .col img{
+        width: 70%;
+    }
+
+    .c-block .container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%; /* Adjusted max-width */
+        padding: 0 1em;
+        position: relative;
+    }
+
+    /* Headings */
+    #hero h1 {
+        font-size: 25px;
+    }
+
+    .c-block h2 {
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;
+    }
+
+    .wysiwyg-content h2 {
+        line-height: 16px;
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    /* Paragraphs */
+    .wysiwyg-content p {
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    /* List Items */
+    .services-capabilities .capabilities-list li {
+        font-size: 12px;
+    }
+
+    /* Blockquote */
+    blockquote {
+        padding-left: 12px;
+    }
+}
+
     </style>
 </head>
 
@@ -298,9 +714,6 @@
 
     <!-- End #header -->
 
-    <!-- ======= Hero Section =======
-    <section id="hero" style="background-image: url('/Amoeba/assets/img/services.png'); background-position: top center; opacity: 0.6; "> -->
-
     <section id="hero">
         <div class="hero-container">
             <h1>Cloud & Application Services</h1>
@@ -309,57 +722,6 @@
     </section>
 
     <main id="main">
-        <!-- <section id="cloud" class="container-fluid cloud" style="background: #F1F1F2;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 mx-auto">
-                        <h1>Leveraging the cloud today is no longer simply rehosting applications, but instead
-                            intelligent and thoughtful steps towards engineering cloud-native systems</h1>
-                        <h3>
-                            Modern cloud platforms are complex.
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe temporibus corrupti
-                            nulla, quisquam ea unde quos vel distinctio, illo ducimus est asperiores, ipsa molestiae
-                            commodi odio sed odit. Excepturi?
-
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe temporibus
-                            corrupti nulla, quisquam ea unde quos vel distinctio, illo ducimus est asperiores, ipsa
-                            molestiae commodi odio sed odit. Excepturi?</p>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe temporibus
-                            corrupti nulla, quisquam ea unde quos vel distinctio, illo ducimus est asperiores, ipsa
-                            molestiae commodi odio sed odit. Excepturi?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe temporibus
-                            corrupti nulla, quisquam ea unde quos vel distinctio, illo ducimus est asperiores, ipsa
-                            molestiae commodi odio sed odit. Excepturi?
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe temporibus
-                            corrupti nulla, quisquam ea unde quos vel distinctio, illo ducimus est asperiores, ipsa
-                            molestiae commodi odio sed odit. Excepturi?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe temporibus
-                            corrupti nulla, quisquam ea unde quos vel distinctio, illo ducimus est asperiores, ipsa
-                            molestiae commodi odio sed odit. Excepturi?
-                        </p>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe temporibus
-                            corrupti nulla, quisquam ea unde quos vel distinctio, illo ducimus est asperiores, ipsa
-                            molestiae commodi odio sed odit. Excepturi?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe temporibus
-                            corrupti nulla, quisquam ea unde quos vel distinctio, illo ducimus est asperiores, ipsa
-                            molestiae commodi odio sed odit. Excepturi?
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe temporibus
-                            corrupti nulla, quisquam ea unde quos vel distinctio, illo ducimus est asperiores, ipsa
-                            molestiae commodi odio sed odit. Excepturi?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe temporibus
-                            corrupti nulla, quisquam ea unde quos vel distinctio, illo ducimus est asperiores, ipsa
-                            molestiae commodi odio sed odit. Excepturi?
-
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section> -->
 
         <section class="c-block c-block--cols c-block--grey section-in section-been ">
             <div class="container container--block">
@@ -370,9 +732,9 @@
             <div class="container narrow">
                 <div class="col">
                     <div class="wysiwyg-content">
-                        <h2 style="text-align: left;"><span style="color: #205f65;">Modern cloud platforms are
-                                complex.
-                            </span></h2>
+                        <h2 style="text-align: left;color: #205f65;">Modern cloud platforms are
+                            complex.
+                        </h2>
 
                         <p style="text-align: left;">As an Amazon Web Services, Microsoft Azure and Google Cloud
                             Platform partner, we have significant experience in migrating applications, data and
@@ -393,13 +755,12 @@
                             service
                             development.</p>
 
-                        <h2 style="text-align: left;"><span style="color: #205f65;">We place
-                                emphasis…&nbsp;</span>
+                        <h2 style="text-align: left;color: #205f65;">We place
+                            emphasis…&nbsp;
                         </h2>
-                        <p style="text-align: left;"><span style="color: #000000;">…on cloud interoperability and
-                                integration ensuring you get cloud transformation right the first time.
-                            </span>Our
-                            technical architects and engineers help build and connect sustainable cloud-native
+                        <p style="text-align: left;color: #000000">…on cloud interoperability and
+                            integration ensuring you get cloud transformation right the first time.
+                            Ourtechnical architects and engineers help build and connect sustainable cloud-native
                             systems
                             to thrive in the cloud ecosystem. Services include cloud-native software development,
                             container deployment, serverless platforms, landing zones, automation orchestration
@@ -409,14 +770,14 @@
                             API-based solutions.</p>
 
 
-                        <h2 style="text-align: left;"><span style="color: #205f65;">We’ll help you…</span></h2>
+                        <h2 style="text-align: left;color: #205f65;">We’ll help you…</h2>
                         <p style="text-align: left;">…enable DevOps and DevSecOps-aligned software and platform
                             engineering capabilities based on continuous integration/delivery principles. We’ll
                             also
                             work with you to coach and transfer knowledge to your in-house teams, so they can
                             take
                             ownership of operating and improving your services.</p>
-                        <h2 style="text-align: left;"><span style="color: #205f65;">Our work…</span></h2>
+                        <h2 style="text-align: left;color: #205f65;">Our work…</span></h2>
                         <p style="text-align: left;">…is based on modern, well-architected framework and ‘Secure
                             Software Development Life Cycle’ principles, delivering secure, high-performing,
                             resilient, well-monitored, and cost-effective platforms for your applications and
@@ -430,7 +791,7 @@
         <section class="c-block services-capabilities section-init section-been section-in"
             style="background-color: white;">
             <div class="container">
-                <h2 class="c-block-title"style="color: #000000;">Our expertise within cloud engineering</h2>
+                <h2 class="c-block-title" style="color: #000000;">Our expertise within cloud engineering</h2>
             </div>
             <div class="container">
                 <div class="col col--list">
@@ -446,7 +807,7 @@
                 </div>
                 <div class="col col--image">
                     <div class="capabilities-image">
-                        <img src="assets/img/cloud.png" alt="Cloud Engineering Diagram">
+                        <img src="assets/img/cloud1.png" alt="Cloud Engineering Diagram">
                     </div>
                 </div>
             </div>
@@ -475,7 +836,125 @@
                 <!-- Another empty container -->
             </div>
         </section>
+
+        <section class="c-block c-block--cols section-init section-in section-been" style="background-color: white" ;>
+            <div class="container container--block">
+                <h2 class="c-block-title" style="color: #000000;">How can we help?</h2>
+            </div>
+            <div class="container narrow">
+                <div class="col">
+                    <div class="wysiwyg-content" style="background-color: white;">
+                        <p>Methods has an exceptional track record in software and cloud engineering, having delivered
+                            the most high-profile platform services in use by citizens today; working with over 300
+                            clients. We bring industry recognised best practises in scaled agile and engineering
+                            methodologies whilst sharing our knowledge at every step of our projects and leaving a
+                            legacy of secure, well-architected, commented and documented solutions.</p>
+                        <h2>Agile development</h2>
+                        <p>Our team delivers value quickly, so we don’t subject our clients to months of analysis and
+                            requirement gathering.</p>
+                        <p>We use agile development methodologies to produce something concrete quickly, get user
+                            feedback and iterate based on that feedback until we have a product that meets user needs.
+                            This incremental and rapid cycle approach to platform development and migration is now
+                            accepted as the way forward in both the private and public sector.</p>
+                        <h2 style="color: #205f65;">Consultant-developers</h2>
+                        <p>We bring yet more speed and agility by providing you with a compact team of expert full-stack
+                            agile ‘Consultant Engineers.’ They engage with stakeholders directly and have the hands-on
+                            agile development experience needed to deliver success. We know that this approach helps
+                            establish efficient lines of communication and shared goals. We’ll always speak your
+                            language – whether that’s technical or not.</p>
+                        <h2 style="color: #205f65;">Quality assurance</h2>
+                        <p>By embedding quality assurance and testing from day one, we ensure any faults that could
+                            hinder the product down the line can be caught early. Our development process includes
+                            rigorous requirements discovery, code reviews, testing, and release management – catching
+                            issues before they occur. This stringent testing process ultimately saves our clients’ time
+                            and money, resulting in better products.</p>
+                        <h2 style="color: #205f65;">Operating as ‘one team’ </h2>
+                        <div>
+                            <p>To deliver value faster, we become part of your development team.</p>
+                            <p>We build relationships with your team and get involved in solving problems. We like to
+                                work in partnership with our clients. That’s the Methods difference.</p>
+                        </div>
+                        <h2 style="color: #205f65;">Accredited partner</h2>
+                        <p>Methods is a leading Amazon Web Services (AWS), Microsoft Azure and Google Cloud partner,
+                            offering platform agnostic engineering capabilities.</p>
+                        <p><img decoding="async" class="wp-image-3928 aligncenter" src="assets/img/aws.png"
+                                alt="Azure, AWS & Google Cloud Logos" width="434" height="89"
+                                sizes="(max-width: 434px) 100vw, 434px"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row ">
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i><a href="#">Cloud & Application Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i><a href="#">Mobile App Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i><a href="#">Microsoft Power Apps Development </a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i><a href="#">Bubble App Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i><a href="#">AI & Machine Learning</a></li>
+                            <li><i class="bx bx-chevron-right"></i><a href="#">QA & Testing</a></li>
+                            <li><i class="bx bx-chevron-right"></i><a href="#">UI/UX Designing</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            A108 Adam Street <br>
+                            New York, NY 535022<br>
+                            United States <br><br>
+                            <strong>Phone:</strong> +1 5589 55488 55<br>
+                            <strong>Email:</strong> info@example.com<br>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+
+                &copy; Copyright <strong><span>IQ TECH</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="https://info@iqtech.com">IQTECH</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
